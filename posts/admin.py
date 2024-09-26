@@ -4,9 +4,9 @@ from posts.models import Post, Category, Tag, Comment
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ["title", "content", "created_at", "update_at"]
+    list_display = ["title", "content", "rate", "created_at", "update_at"]
     list_display_links = ["title", "content", "created_at", "update_at"]
-    list_filter = ["created_at", "update_at", "category", "tags"]
+    list_filter = ["created_at", "update_at", "category", "tag"]
     list_editable = ["rate"]
 
 
